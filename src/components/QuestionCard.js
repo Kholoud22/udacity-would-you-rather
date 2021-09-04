@@ -27,7 +27,7 @@ const QuestionCard = (props) => {
               <h6>{props.optionTwoText}</h6>
             </Row>
           </Col>
-          <Col className="m-auto text-right">
+          <Col className="m-auto text-right col-4">
             <Link to={`/questions/${props.id}`}>
               <Button style={{ width: 'unset' }}>
                 {props.isAnswered ? 'View' : 'Vote'}
