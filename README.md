@@ -7,12 +7,10 @@ https://would-you-rather-udacity-app.herokuapp.com/
 
 # Run the project locally
 
-  npm install
-  npm start
+  - npm install
+  - npm start
 
-```
-
-* Yarn :
-  yarn install
-  yarn start
+``` or
+ - yarn install
+ - yarn start
 ```
