@@ -27,13 +27,13 @@ const QuestionCard = (props) => {
               <h6>{props.optionTwoText}</h6>
             </Row>
           </Col>
-          <Col sm={4} className="m-auto text-right">
+          <div className="m-auto text-right">
             <Link to={`/questions/${props.id}`}>
               <Button style={{ width: 'unset' }}>
                 {props.isAnswered ? 'View' : 'Vote'}
               </Button>
             </Link>
-          </Col>
+          </div>
         </Row>
       </Card.Body>
     </Card>
