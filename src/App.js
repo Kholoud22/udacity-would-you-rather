@@ -21,7 +21,7 @@ class App extends Component {
       <Fragment>
         <LoadingBar />
         <div className="container">
-          {Object.keys(this.props.authedUser).length ? (
+          {this.props.authedUser && Object.keys(this.props.authedUser).length ? (
             <div>
               <Nav />
               <Switch>
