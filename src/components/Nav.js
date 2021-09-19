@@ -42,7 +42,7 @@ class Nav extends React.Component {
                 onClick={(event) => {
                   event.preventDefault()
                   this.props.setAuthedUser(null)
-                  this.props.history.push('/login')
+                  //this.props.history.push('/login')
                 }}
               >
                 Logout
