@@ -6,12 +6,16 @@ import 'react-toastify/dist/ReactToastify.css'
 import './index.css'
 import App from './App'
 import store from './store'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { StyledEngineProvider } from '@mui/material/styles'
 
 ReactDOM.render(
-  <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>,
+  <StyledEngineProvider injectFirst>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  </StyledEngineProvider>,
   document.getElementById('root')
 )

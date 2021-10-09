@@ -15,7 +15,7 @@ class Leaderboard extends Component {
             leaderboardPayload.map((user) => (
               <div
                 key={user.id}
-                className="col-4"
+                className="col-lg-4 col-md-4 col-sm-12"
                 style={{
                   border: '1px solid cadetblue',
                   boxShadow: '2px 2px cadetblue',
@@ -57,7 +57,7 @@ class Leaderboard extends Component {
                       disabled
                       className="rounded-circle"
                       style={{
-                        maxWidth: '45px',
+                        maxWidth: '35px',
                         background: 'cadetblue',
                         border: 'none',
                       }}

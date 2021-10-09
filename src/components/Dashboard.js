@@ -13,7 +13,7 @@ class Dashboard extends Component {
         <h1>Dashboard</h1>
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row>
-            <Col sm="auto">
+            <Col lg="auto" md="auto" sm={12}>
               <Nav variant="pills" className="flex-column">
                 <Nav.Item>
                   <Nav.Link eventKey="first">

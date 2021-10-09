@@ -43,7 +43,24 @@ a {
 .active {
   font-weight: bold;
 }
-
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff !important;
+  background-color: #5f9ea0 !important;
+}
+.nav-pills .nav-link {
+  color: #5f9ea0 !important;
+}
+.btn-primary {
+  background-color: #5f9ea0 !important;
+  border-color: #5f9ea0 !important;
+}
+.progress-bar {
+  background-color: #64748b !important;
+}
+.MuiIconButton-colorSecondary {
+  color: #5f9ea0 !important;
+}
 .nav ul {
   display: flex;
   flex-direction: row;

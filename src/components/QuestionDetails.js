@@ -15,7 +15,7 @@ class QuestionDetails extends React.Component {
         question.optionTwo.votes.includes(authedUser)
     }
     return (
-      <div>
+      <div className="container">
         {!question ? (
           this.props.history.push('/404')
         ) : (

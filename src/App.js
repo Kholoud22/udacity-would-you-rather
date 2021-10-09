@@ -10,7 +10,22 @@ import PageNotFound from './components/PageNotFound'
 import NewQuestion from './components/NewQuestion'
 import QuestionDetails from './components/QuestionDetails'
 import Switch from 'react-bootstrap/esm/Switch'
-import Nav from './components/Nav'
+import MenuBar from './components/MenuBar'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#5f9ea0',
+      contrastText: '#fff',
+    },
+    secondary: {
+      main: '#64748B',
+      contrastText: '#fff',
+    },
+  },
+})
+
 class App extends Component {
   componentDidMount() {
     this.props.handleInitialData()
@@ -18,25 +33,28 @@ class App extends Component {
 
   render() {
     return (
-      <Fragment>
-        <LoadingBar />
-        <div className="container">
-          {Object.keys(this.props.authedUser).length ? (
-            <div>
-              <Nav />
-              <Switch>
-                <Route exact path="/" component={Dashboard} />
-                <Route exact path="/add" component={NewQuestion} />
-                <Route exact path="/leaderboard" component={Leaderboard} />
-                <Route path="/questions/:id" component={QuestionDetails} />
-                <Route path="/404" component={PageNotFound} />
-              </Switch>
-            </div>
-          ) : (
-            <Login />
-          )}
-        </div>
-      </Fragment>
+      <ThemeProvider theme={theme}>
+        <Fragment>
+          <LoadingBar />
+          <div>
+            {this.props.authedUser &&
+            Object.keys(this.props.authedUser).length ? (
+              <div>
+                <MenuBar />
+                <Switch>
+                  <Route exact path="/" component={Dashboard} />
+                  <Route exact path="/add" component={NewQuestion} />
+                  <Route exact path="/leaderboard" component={Leaderboard} />
+                  <Route path="/questions/:id" component={QuestionDetails} />
+                  <Route path="/404" component={PageNotFound} />
+                </Switch>
+              </div>
+            ) : (
+              <Login />
+            )}
+          </div>
+        </Fragment>
+      </ThemeProvider>
     )
   }
 }

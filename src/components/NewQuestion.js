@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
@@ -31,7 +31,7 @@ class NewQuestion extends Component {
   render() {
     const { stOption, ndOption } = this.state
     return (
-      <Fragment>
+      <div className="container">
         <h1>Would you rather</h1>
         <div className="form-group">
           <label htmlFor="stOption">1st Option</label>
@@ -60,7 +60,7 @@ class NewQuestion extends Component {
         >
           Add Question
         </Button>
-      </Fragment>
+      </div>
     )
   }
 }

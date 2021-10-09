@@ -36,6 +36,7 @@ class Login extends Component {
           }}
         >
           <Card
+            className="col-sm-12 col-lg-auto col-md-auto"
             style={{
               boxShadow: '5px 5px cadetblue',
               border: '1px solid',

@@ -27,7 +27,7 @@ class Question extends Component {
         : 'optionTwo'
       : null
     return (
-      <Card variant="outlined" className="mb-3">
+      <Card variant="outlined" className="mr-2">
         <Card.Body>
           <Container>
             <Row>
@@ -35,7 +35,6 @@ class Question extends Component {
                 <Image
                   src={question.avatarURL}
                   style={{
-                    width: '100px',
                     borderRadius: '10px',
                   }}
                 />
