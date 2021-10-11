@@ -2,15 +2,15 @@
 
 this is the project for Udacity's React & Redux course.
 
-#Run the project locally
+# Deployed
+https://would-you-rather-udacity-app.herokuapp.com/
 
-- npm :
-  npm install
-  npm start
+# Run the project locally
 
-```
+  - npm install
+  - npm start
 
-* Yarn :
-  yarn install
-  yarn start
+``` or
+ - yarn install
+ - yarn start
 ```
