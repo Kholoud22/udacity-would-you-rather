@@ -39,7 +39,7 @@ class Authentication extends Component {
             }}
           >
             <h1 className="text-center">Would You rather app</h1>
-            <Image className='app-logo' />
+            <Image src="would_you_rather_logo.png" />
             <Row>
               <div style={{
                 textAlign:'right'
