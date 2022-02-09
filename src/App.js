@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import LoadingBar from 'react-redux-loading'
 import { Route } from 'react-router-dom'
 import { handleInitialData } from './actions/shared'
 import Authentication from './components/Authentication'
@@ -35,7 +34,6 @@ class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <Fragment>
-          <LoadingBar />
           <div>
             {this.props.authedUser &&
             Object.keys(this.props.authedUser).length ? (

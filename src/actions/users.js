@@ -1,6 +1,5 @@
 import { RECEIVE_USERS, USER_ADDED_QUESTION, USER_ANSWERED_QUESTION, ADD_USER } from '.'
 import { saveUser } from '../utils/api'
-import { showLoading, hideLoading } from 'react-redux-loading'
 
 export function receiveUsers(users) {
   return {
@@ -23,11 +22,9 @@ export function Register(user) {
 
 export function handleRegisteration({ username, name, avatarURL }) {
   return (dispatch) => {
-    dispatch(showLoading())
     return saveUser({ username, name, avatarURL }).then(
       (user) => {
         dispatch(Register(user))
-        dispatch(hideLoading())
       }
     )
   }
