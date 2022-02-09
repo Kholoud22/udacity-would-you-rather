@@ -3,7 +3,7 @@
 this is the project for Udacity's React & Redux course.
 
 # Deployed
-https://would-you-rather-udacity-app.herokuapp.com/
+https://udacity-would-you-rather-three.vercel.app/
 
 # Run the project locally
 
