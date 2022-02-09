@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Card, Image } from 'react-bootstrap'
-import {FormLabel, FormControl} from '@material-ui/core'
+import {FormLabel, FormControl} from '@mui/material'
 class Register extends Component {
   state = {
     username: '',

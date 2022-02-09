@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Container, Card, Row, Col, Image, ProgressBar } from 'react-bootstrap'
-import Radio from '@material-ui/core/Radio'
-import RadioGroup from '@material-ui/core/RadioGroup'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
-import FormControl from '@material-ui/core/FormControl'
+import Radio from '@mui/material/Radio'
+import RadioGroup from '@mui/material/RadioGroup'
+import FormControlLabel from '@mui/material/FormControlLabel'
+import FormControl from '@mui/material/FormControl'
 import { connect } from 'react-redux'
 import { handleSaveQuestionAnswer } from '../actions/questions'
 class Question extends Component {

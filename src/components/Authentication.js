@@ -6,7 +6,7 @@ import { Card, Image, Row } from 'react-bootstrap'
 import { withRouter } from 'react-router-dom'
 import Login  from './Login'
 import Register from './Register'
-import FormLabel from '@material-ui/core/FormLabel'
+import FormLabel from '@mui/material/FormLabel'
 
 class Authentication extends Component {
   state = {
@@ -39,7 +39,7 @@ class Authentication extends Component {
             }}
           >
             <h1 className="text-center">Would You rather app</h1>
-            <Image src="would_you_rather_logo.png" />
+            <Image className="app-logo"/>
             <Row>
               <div style={{
                 textAlign:'right'
