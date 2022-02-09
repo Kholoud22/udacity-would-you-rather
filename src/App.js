@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import LoadingBar from 'react-redux-loading'
 import { Route } from 'react-router-dom'
 import { handleInitialData } from './actions/shared'
-import Login from './components/Login'
+import Authentication from './components/Authentication'
 import Leaderboard from './components/Leaderboard'
 import Dashboard from './components/Dashboard'
 import PageNotFound from './components/PageNotFound'
@@ -50,7 +50,7 @@ class App extends Component {
                 </Switch>
               </div>
             ) : (
-              <Login />
+              <Authentication />
             )}
           </div>
         </Fragment>

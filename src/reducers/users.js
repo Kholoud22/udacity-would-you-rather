@@ -2,6 +2,7 @@ import {
   RECEIVE_USERS,
   USER_ADDED_QUESTION,
   USER_ANSWERED_QUESTION,
+  ADD_USER
 } from '../actions'
 
 export default function usersReducer(users = {}, action) {
@@ -10,6 +11,12 @@ export default function usersReducer(users = {}, action) {
       return {
         ...users,
         ...action.data.users,
+      }
+      case ADD_USER:
+      const { user } = action.data
+      return {
+        ...users,
+        [user.id]: user,
       }
     case USER_ADDED_QUESTION:
       const authedUser = action.data.authedUser

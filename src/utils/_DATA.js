@@ -150,6 +150,32 @@ function formatQuestion({ optionOneText, optionTwoText, author }) {
   }
 }
 
+function formatUser({ username, name, avatarURL }) {
+  return {
+    id: username,
+    name: name,
+    avatarURL: avatarURL ? avatarURL : 'https://i.pravatar.cc/150?u=a042581f4e29026704c',
+    answers: {
+    },
+    questions: [],
+  }
+}
+
+export function _saveUser(user) {
+  return new Promise((res, rej) => {
+    const formattedUser = formatUser(user)
+
+    setTimeout(() => {
+      users = {
+        ...users,
+        [formattedUser.id]: formatUser(user)
+      }
+
+      res(formattedUser)
+    }, 1000)
+  })
+}
+
 export function _saveQuestion(question) {
   return new Promise((res, rej) => {
     const authedUser = question.author

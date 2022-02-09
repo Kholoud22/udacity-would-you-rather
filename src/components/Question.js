@@ -36,6 +36,8 @@ class Question extends Component {
                   src={question.avatarURL}
                   style={{
                     borderRadius: '10px',
+                    maxWidth: '150px',
+                    maxHeight: '150px'
                   }}
                 />
               </Col>
